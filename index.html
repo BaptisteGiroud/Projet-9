@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" defer />
+    <!-- Debut Meta data Facebook  -->
+    <meta property="og:title" content="NINA CARDUCCI - Photographe" />
+    <meta
+      property="og:url"
+      content="https://baptistegiroud.github.io/Projet-9/"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/BaptisteGiroud/Projet-9/blob/main/assets/images/nina.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Site web Portfolio de Nina Carducci, photographe."
+    />
+    <meta property="og:site_name" content="Nina Carducci - Portfolio" />
+    <meta property="og:type" content="website" />
+    <!-- Fin Meta data Facebook  -->
+
+    <!-- Debut Link -->
+    <link rel="stylesheet" href="./assets/purified/bootstrap.css" defer />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
-    />
-    <meta charset="UTF-8" />
-    <title>📷 NINA CARDUCCI 📷</title>
-    <meta
-      name="description"
-      content="Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer."
     />
     <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
     <script
@@ -24,6 +36,57 @@
     ></script>
     <script src="./assets/maugallery.js" defer></script>
     <script src="./assets/scripts.js" defer></script>
+    <!-- Fin Link -->
+
+    <!-- Debut Balise schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PhotographyStudio",
+        "name": "Nina Carducci Photographe",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "10:00",
+            "closes": "19:00"
+          },
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue alsace loraine",
+          "postalCode": "33200",
+          "addressLocality": "Bordeaux",
+          "addressCountry": "France"
+        }
+        "telephone": "+33 5 56 67 78 89"
+      }
+    </script>
+    <!-- Fin Balise schema.org -->
+
+    <!-- Debut opti SEO -->
+    <meta
+      name="keywords"
+      content="photographie, photographe, shooting, portfolio, Nina Carducci, images, photos, galerie, services de photographie, retouches photos"
+    />
+    <meta name="author" content="Nina Carducci" />
+    <meta name="robots" content="index,follow" />
+    <meta name="geo.placename" content="Bordeaux, France" />
+    <!-- Fin opti SEO -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title itemprop="name">📷 NINA CARDUCCI 📷</title>
+    <meta
+      name="description"
+      content="Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer."
+    />
   </head>
   <body>
     <div class="top-header">
@@ -162,13 +225,17 @@
         </button>
       </div>
     </div>
-    <div id="about">
+    <div id="about" itemscope itemtype="https://schema.org/Photographer">
       <div class="picture left">
-        <img src="./assets/images/nina.jpg" alt="Nina Carducci" />
+        <img
+          src="./assets/images/nina.jpg"
+          alt="Nina Carducci"
+          itemprop="image"
+        />
       </div>
       <div id="about-me">
         <h2 class="about-me__title">A propos de moi</h2>
-        <p class="about-me__introduction">
+        <p class="about-me__introduction" itemprop="description">
           Devenir photographe était pour moi une évidence. Comme si j’y étais
           prédestiné. Saisir un moment, une émotion, une situation, un endroit,
           une lumière et les rendre immortels, voilà ce qui me fait vibrer.
@@ -188,13 +255,20 @@
     <div id="gallery">
       <h2 class="title">Portfolio</h2>
       <div class="container py-3">
-        <div class="gallery" style="display: none">
+        <div
+          class="gallery"
+          style="display: none"
+          itemscope
+          itemtype="https://schema.org/ImageGallery"
+        >
           <img
             data-gallery-tag="Concert"
             class="gallery-item"
             src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
             alt="Concert Aaron Paul"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Entreprises"
@@ -202,6 +276,8 @@
             src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"
             alt="Entreprise Ali Morshedlou"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Entreprises"
@@ -209,6 +285,8 @@
             src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"
             alt="Entreprise Jason Goodman"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Mariages"
@@ -216,6 +294,8 @@
             src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"
             alt="Mariage Hannah Busing"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Portrait"
@@ -223,6 +303,8 @@
             src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"
             alt="Portrait Ade Tunji"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Mariages"
@@ -230,6 +312,8 @@
             src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"
             alt="Mariage Jakob Owens"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Portrait"
@@ -237,6 +321,8 @@
             src="./assets/images/gallery/portraits/nino-van-prattenburg-443cl1uR_8-unsplash.webp"
             alt="Portrait Nino Van Prattenburg"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Concert"
@@ -244,6 +330,8 @@
             src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
             alt="Concert Austin Neill"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
           <img
             data-gallery-tag="Entreprises"
@@ -251,6 +339,8 @@
             src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"
             alt="Entreprise Mateus Campos"
             fetchpriority="low"
+            itemprop="associatedMedia"
+            itemtype="https://schema.org/ImageObject"
           />
         </div>
       </div>
@@ -268,46 +358,64 @@
         </figure>
       </div>
     </div>
-    <div id="services">
+    <div id="services" itemscope itemtype="https://schema.org/Service">
       <h2 class="title">Mes services</h2>
       <div class="container">
         <div class="service">
           <div class="service__description">
-            <h3>Shooting photo</h3>
-            <p>
+            <h3 itemprop="name">Shooting photo</h3>
+            <p itemprop="description">
               Pour capturer vos moments les plus précieux et garder un souvenir
               impérissable. Je me déplace en Île-de-France pour réaliser vos
               photos
             </p>
           </div>
-          <div class="service__price">
-            <h3>350€/demi journée</h3>
+          <div
+            class="service__price"
+            itemprop="offers"
+            itemscope
+            itemtype="https://schema.org/Offer"
+          >
+            <meta itemprop="priceCurrency" content="EUR" />
+            <h3 itemprop="price">350€/demi journée</h3>
             <p>Matériel, déplacement inclus</p>
           </div>
         </div>
         <div class="service">
           <div class="service__description">
-            <h3>Retouches</h3>
-            <p>
+            <h3 itemprop="name">Retouches</h3>
+            <p itemprop="description">
               Vous souhaitez retoucher vos photos pour un résultat professionnel
               ? Bénéficier d’un rendu optimal pour vos publications
             </p>
           </div>
-          <div class="service__price">
-            <h3>50€/photo</h3>
+          <div
+            class="service__price"
+            itemprop="offers"
+            itemscope
+            itemtype="https://schema.org/Offer"
+          >
+            <meta itemprop="priceCurrency" content="EUR" />
+            <h3 itemprop="price">50€/photo</h3>
             <p>2 AR par photo</p>
           </div>
         </div>
         <div class="service">
           <div class="service__description">
-            <h3>Album photos</h3>
-            <p>
+            <h3 itemprop="name">Album photos</h3>
+            <p itemprop="description">
               Partagez avec vos proches et vos clients les photos des moments
               partagés ensemble à travers un album photo personnalisé
             </p>
           </div>
-          <div class="service__price">
-            <h3>400€ album A4</h3>
+          <div
+            class="service__price"
+            itemprop="offers"
+            itemscope
+            itemtype="https://schema.org/Offer"
+          >
+            <meta itemprop="priceCurrency" content="EUR" />
+            <h3 itemprop="price">400€ album A4</h3>
             <p>30 pages recto/verso</p>
           </div>
         </div>
